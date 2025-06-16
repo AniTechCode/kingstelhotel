@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Kingstel Hotel, a 3-star luxury hotel in Sekondi-Takoradi, Ghana. Book rooms, dining, and conference spaces today!">
+    <meta name="keywords" content="Kingstel Hotel, luxury hotel Ghana, Sekondi-Takoradi accommodation, 3-star hotel, rooms, dining, conference">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Kingstel Hotel">
+    <meta name="theme-color" content="#ee780a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kingstel Hotel - Luxury Stay in Sekondi-Takoradi, Ghana">
+    <meta property="og:description" content="Discover luxury at Kingstel Hotel, a 3-star retreat in Ghana with premium rooms, dining, and conference facilities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kingstelhotel.com">
+    <meta property="og:image" content="https://www.kingstelhotel.com/images/Kingstel Hotel.png">
+    <meta property="og:site_name" content="Kingstel Hotel">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kingstel Hotel - Luxury Accommodation in Ghana">
+    <meta name="twitter:description" content="Book your stay at Kingstel Hotel, a 3-star retreat in Sekondi-Takoradi with top amenities.">
+    <meta name="twitter:image" content="https://www.kingstelhotel.com/images/Kingstel Hotel.png">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.kingstelhotel.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/hotel.svg">
+
+    <link rel="icon" type="image/svg+xml" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjjfdQjcPqDeALBNO9_MZ_dx7SvPzLqkbefA&s">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+        }
+    
+        .menu-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        
+    
+        .menu-list {
+            background: linear-gradient(135deg, #ee780a, #b44402);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        .menu-category {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+    
+        .menu-category div {
+            font-size: 1.2rem;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+    
+        .menu-category div:hover,
+        .menu-category div.active {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    
+        .menu-items {
+            list-style: none;
+        }
+
+        .menuUnique{
+           
+            padding: 30px;
+        }
+    
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            padding: 12px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+    
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+    
+        .menu-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+    
+        .menu-item h4 {
+            font-size: 1.1rem;
+            color: #333;
+            flex: 1;
+        }
+    
+        .menu-item p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+    
+        .menu-item .price {
+            font-size: 1rem;
+            color: #ff7e5f;
+            font-weight: bold;
+        }
+    
+        .featured-dish {
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            padding: 30px;
+            height: 470px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            background-image: url(images/Grilled\ Pork.jpg);
+        }
+    
+        .featured-dish .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+        }
+    
+        .featured-dish h2, .featured-dish p, .featured-dish .price {
+            position: relative;
+            z-index: 1;
+        }
+    
+        .view-restaurant-btn {
+            padding: 16px 25px;
+            background-color: #844103;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            transition: background 0.3s ease;
+        }
+    
+        .view-restaurant-btn:hover {
+            background-color: #da6200;
+        }
+    
+        .view-restaurant-btn a {
+            text-decoration: none;
+            color: white;
+        }
+    
+        @media (max-width: 768px) {
+            .menu-container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            .section-header1{
+                margin-top: 30px;
+            
+            padding: 30px;
+        }
+        .feature-mobille{
+            margin-top:-45px;
+            
+          
+        }
+        }
+    </style>
+    
+    
+
+<style>
+        /* General Reset */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5ddd5;
+        }
+
+        /* Chat Icon */
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #eabe28;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .chat-icon:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        .chat-icon i {
+            color: white;
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        /* Chat Popup Message */
+        .chat-popup {
+            position: fixed;
+            bottom: 90px; /* Above the chat icon */
+            right: 25px;
+            background-color: #eabe28;
+            color: black;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 1001;
+            pointer-events: none; /* Prevents interaction */
+        }
+
+        .chat-popup.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 360px;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease-in-out;
+            visibility: hidden;
+            z-index: 999;
+        }
+
+        .chat-widget.show {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        /* Chat Header */
+        .chat-header {
+            background-color: #075E54;
+            color: #ffffff;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .chat-header .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chat-header .logo i {
+            font-size: 20px;
+        }
+
+        .chat-header .logo span {
+            font-size: 18px;
+        }
+
+        .chat-header button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        /* Chat Body */
+        .chat-body {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #e5ddd5;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Messages */
+        .message {
+            padding: 10px 15px;
+            border-radius: 8px;
+            max-width: 70%;
+            font-size: 14px;
+            line-height: 1.4;
+            word-wrap: break-word;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .message.bot {
+            background-color: #ffffff;
+            color: #333;
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+        }
+
+        .message.user {
+            background-color: #DCF8C6;
+            color: #333;
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+        }
+
+        /* Typing Animation */
+        .typing-animation {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .typing-animation span {
+            width: 8px;
+            height: 8px;
+            background-color: #999;
+            border-radius: 50%;
+            animation: blink 1.4s infinite;
+        }
+
+        .typing-animation span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-animation span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        /* Quick Replies */
+        .quick-replies {
+            display: flex;
+            gap: 8px;
+            margin-top: 5px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .quick-replies button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .quick-replies button:hover {
+            background-color: #128C7E;
+        }
+
+        /* Chat Footer */
+        .chat-footer {
+            display: flex;
+            padding: 10px;
+            background-color: #F0F0F0;
+            border-top: 1px solid #d9d9d9;
+        }
+
+        #user-input {
+            flex: 1;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            outline: none;
+            font-size: 14px;
+            background-color: #ffffff;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        #send-btn {
+            background-color: #25D366;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        #send-btn:hover {
+            background-color: #128C7E;
+        }
+
+        #send-btn i {
+            font-size: 18px;
+        }
+
+        /* Hide Chat Icon on Mobile When Widget is Open */
+        @media (max-width: 480px) {
+            .chat-widget.show + .chat-icon {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .chat-widget {
+                width: 100%;
+                height: 100%;
+                bottom: 0;
+                right: 0;
+                border-radius: 0;
+            }
+
+            .chat-header {
+                border-radius: 0;
+            }
+
+            .chat-popup {
+                right: 10px; /* Adjust for full-width mobile */
+            }
+        }
+    </style>
+
+    
+</head>
+<body>
+
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                
+                <div class="contact-item desktop-only">
+                    <i data-lucide="mail"></i>
+                    <span>kingstelhotel@gmail.com</span>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/kingstelhotels?igsh=MWRwNng2bHlwZGRwcg=="><i style="color: rgb(179, 14, 55);"  data-lucide="instagram"></i></a>
+                <a href="https://www.facebook.com/share/1BzWdY547p/"><i style="color: steelblue;" data-lucide="facebook"></i></a>
+                <a href="https://x.com/HotelKingstel?t=kqI5Vw9EIqo2rFRP9g3XoQ&s=09"><i style="color: steelblue;" data-lucide="twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar"> 
+        <div class="container nav-content">
+            <div class="logo"><a href="index.html"> <div class="logo"><img src="images/kingstel logo.png" alt=""></div></a></div>
+            
+            <div class="nav-links desktop-menu">
+                <a href="index.html">Home</a>
+                <a href="#rooms">Rooms</a>
+                <a href="amenities.html">Amenities</a>
+                <a href="dining.html">Dining</a>
+                <a href="conference.html">Conference</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <button class="btn-book navBtn">Book Now</button> 
+            </div>
+
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+        </div>
+
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="#rooms">Rooms & Rates</a>
+            <a href="amenities.html">Amenities</a>
+            <a href="dining.html">Dining</a>
+            <a href="conference.html">Conference</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button class="btn-book navBtn">Book Now</button> 
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-heading">
+                <h1 id="typewriter"></h1>
+              </div>
+            <p>Welcome to Kingstel Hotel, where elegance meets comfort. Discover our world-class amenities and exceptional service.</p>
+            
+           
+                         <!-- Booking Form -->
+            <div class="booking-form" id="booking-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Check In</label>
+                        <div class="input-icon">
+                            <i data-lucide="calendar"></i>
+                            <input type="date" id="check-in" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Check Out</label>
+                        <div class="input-icon">
+                            <i data-lucide="calendar"></i>
+                            <input type="date" id="check-out" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Guests</label>
+                        <div class="input-icon">
+                            <i data-lucide="users"></i>
+                            <select id="guests" class="form-control" required>
+                             
+                                <option value="1">1 Adult</option>
+                                <option value="2">2 Adults</option>
+                                <option value="3">2 Adults, 1 Child</option>
+                                <option value="4">2 Adults, 2 Children</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button id="checkAvailability" class="btn-check">
+                        Check Availability
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+             
+<!-- Room Details Modal -->
+    <div id="roomModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i data-lucide="x"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h2>Available Rooms</h2>
+                <div class="booking-dates">
+                    <span id="modalCheckIn"></span> - <span id="modalCheckOut"></span>
+                    <span id="modalGuests"></span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="available-rooms">
+                    <!-- Room cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Booking Form Modal -->
+ 
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">
+            <i data-lucide="x"></i>
+        </button>
+        <div class="modal-header">
+            <h2>Complete Your Booking</h2>
+            <div class="booking-summary">
+                <span id="roomType"></span>
+                <span id="bookingDates"></span>
+                <span id="bookingPrice"></span>
+            </div>
+        </div>
+        <div class="modal-body">
+            <form id="bookingDetailsForm" class="booking-details-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="3"></textarea>
+                </div>
+                <input type="hidden" name="roomType" id="hiddenRoomType">
+                <input type="hidden" name="bookingDates" id="hiddenBookingDates">
+                <input type="hidden" name="bookingPrice" id="hiddenBookingPrice">
+                <button type="submit" id="confirmBookingButton" class="btn-confirm">Confirm Booking</button>
+            </form>
+            <!-- Success Message -->
+            <div id="successMessage" style="display: none; margin-top: 20px; color: green; text-align: center;">
+                Your booking has been sent successfully, and we will call you soon!
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+  
+  <!-- Featured Rooms Section -->
+<section class="featured-rooms" id="rooms">
+    <div class="container">
+        <div class="section-header feature-mobille">
+            <h2 class="special">Our Luxurious Rooms</h2>
+            <p>At Kingstel Hotel, the comfort of our guests is of paramount importance, a commitment that is reflected in the quality and finish of our Bedrooms & Suites.</p>
+        </div>
+        <div class="rooms-scroll-container">
+          
+            <div class="rooms-wrapper">
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="images/RM 419.jpg" alt="Standard Room">
+                        <span class="room-price">GH¢700.00/night</span>
+                    </div>
+                    <div class="room-content">
+                        <h3>Standard Room</h3>
+                        <p>Comfortable and cozy room with modern amenities for a pleasant stay.</p>
+                        <ul class="room-features">
+                            <li>Queen Size Bed</li>
+                            <li>City View</li>
+                            <li>Free Wi-Fi</li>
+                            <li>32" Smart TV</li>
+                        </ul>
+                        <button class="btn-book" onclick="bookNow()">Book Now</button>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="images/RM 419.jpg" alt="Deluxe Room">
+                        <span class="room-price">GH¢850.00/night</span>
+                    </div>
+                    <div class="room-content">
+                        <h3>Deluxe Room</h3>
+                        <p>Spacious room with premium furnishings and enhanced amenities.</p>
+                        <ul class="room-features">
+                            <li>King Size Bed</li>
+                            <li>City View</li>
+                            <li>Mini Bar</li>
+                            <li>42" Smart TV</li>
+                        </ul>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="images/RM 201.jpg" alt="Super Deluxe">
+                        <span class="room-price">GH¢1,000.00/night</span>
+                    </div>
+                    <div class="room-content">
+                        <h3>Super Deluxe</h3>
+                        <p>Luxury room with panoramic views and exclusive privileges.</p>
+                        <ul class="room-features">
+                            <li>King Size Bed</li>
+                            <li>Ocean View</li>
+                            <li>Lounge Access</li>
+                            <li>55" Smart TV</li>
+                        </ul>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="images/Mini Suit.jpg" alt="Mini Suite">
+                        <span class="room-price">GH¢1,100.00/night</span>
+                    </div>
+                    <div class="room-content">
+                        <h3>Mini Suite</h3>
+                        <p>Elegant suite with separate living area and premium services.</p>
+                        <ul class="room-features">
+                            <li>King Size Bed</li>
+                            <li>Living Room</li>
+                            <li>Butler Service</li>
+                            <li>65" Smart TV</li>
+                        </ul>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="images/RM 201d.jpg" alt="Executive Suite">
+                        <span class="room-price">GH¢2,700.00/night</span>
+                    </div>
+                    <div class="room-content">
+                        <h3>Executive Suite</h3>
+                        <p>Ultimate luxury with panoramic views and exclusive amenities.</p>
+                        <ul class="room-features">
+                            <li>Master Bedroom</li>
+                            <li>Private Terrace</li>
+                            <li>24/7 Butler</li>
+                            <li>Jacuzzi</li>
+                        </ul>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-btn scroll-prev" aria-label="Scroll left">
+                <i data-lucide="chevron-left"></i>
+            </button>
+            <button class="scroll-btn scroll-next" aria-label="Scroll right">
+                <i data-lucide="chevron-right"></i>
+            </button>
+            
+        </div>
+    </div>
+</section>
+
+    <!-- Amenities Section -->
+    <section class="amenities" id="amenities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hotel Amenities</h2>
+                <p>Indulge in our comprehensive range of facilities</p>
+            </div>
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <i data-lucide="wifi"></i>
+                    <h3>High-Speed WiFi</h3>
+                    <p>Stay connected with complimentary high-speed internet throughout the hotel</p>
+                </div>
+                
+                <div class="amenity-card">
+                    <i data-lucide="dumbbell"></i>
+                    <h3>Fitness Center & Africa Bar</h3>
+                    <p>State-of-the-art equipment and personal training services</p>
+                </div>
+                <div class="amenity-card">
+                    <i data-lucide="waves"></i>
+                    <h3>Tennis Court & Pool</h3>
+                    <p>Relax in our luxury spa or take a dip in the infinity pool</p>
+                </div>
+                <div class="amenity-card">
+                    <i data-lucide="utensils"></i>
+                    <h3>Fine Dining</h3>
+                    <p>Experience culinary excellence at our restaurants</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    
+       <!-- Menu Section -->
+        
+       <div class="section-header menuUnique" >
+        <h2>Dining & Bar</h2>
+        <p>Enjoy Ghanaian, Ivorian and Continental meals prepared by our competent chef for your tasting pleasure.</p>
+    </div>
+<div class="menu-container container">
+    
+    <!-- Menu List -->
+    <div class="menu-list">
+        <div class="menu-category">
+            <div class="category active" data-category="mains">Mains</div>
+            <div class="category" data-category="desserts">Desserts</div>
+            <div class="category" data-category="drinks">Drinks</div>
+        </div>
+        <ul class="menu-items" id="menu-items">
+            <!-- Menu items will be dynamically added here -->
+        </ul>
+    </div>
+    
+    <!-- Featured Dish -->
+    <div class="featured-dish" id="featured-dish">
+        <h2>Grilled Pork</h2>
+        <p>Meat / Potatoes / Rice</p>
+        <div class="price">₵49.99</div>
+    </div>
+
+    <button class="view-restaurant-btn">
+        <a href="dining.html">View Our Restaurant</a>
+    </button>
+</div>
+
+
+
+    <!-- Special Offers Section -->
+    <section class="special-offers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conferencing & Events</h2>
+                <p>Take advantage of our exclusive deals and packages</p>
+            </div>
+            <div class="offers-slider" id="offersSlider">
+                <div class="offers-track">
+                    <div class="offer-card">
+                        <img src="images/coperetemeetings.jpg" alt="Weekend Getaway">
+                        <div class="offer-content">
+                            <h3>Corporate Meetings</h3>
+                            <p>Corporate Meetings are very a crucial part of business activities. They are a significant means of formal communication. Meetings are a venue for generation of new and innovative ideas.</p>
+                            <button class="btn-book">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <img src="images/wedding&event.jpg" alt="Spa Package">
+                        <div class="offer-content">
+                            <h3>Weddings & Social Events </h3>
+                            <p>With two banquet halls well equipped with modern audio & visual equipment that can comfortably seat 500 people in theatre form and 200 people respectively to meet your needs. Make your next event truly extra ordinary with our cool packages to cover all the breaks you will need to maximize your participants' input during the meetings or conferences.</p>
+                            <button class="btn-book wedding">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <img src="images/Outside Catering.jpg" alt="Dining Special">
+                        <div class="offer-content">
+                            <h3>Outside Catering</h3>
+                            <p>Let us bring our delicious meals to make your events memorable right at your doorstep.</p>
+                            <button class="btn-book restaurant">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="offer-card">
+                        <img src="images/Photoshoot & picturing.jpg" alt="Dining Special">
+                        <div class="offer-content">
+                            <h3>Photoshoot & picturing</h3>
+                            <p>Take a photoshoot and our classic and natural environment at a low cost. Call us at +233 31 229 0511.</p>
+                            <button class="btn-book call-now">Call Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-prev" aria-label="Previous slide">←</button>
+                    <button class="slider-next" aria-label="Next slide">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- Other Services Section -->
+<section class="dining" id="dining">
+    <div class="container">
+        <div class="section-header">
+            <h2>Other Special Facilities</h2>
+            <p>Discover more by contacting our reception</p>
+        </div>
+        <div class="dining-grid">
+            <div class="dining-card" data-facility="gym-tennis">
+                <div class="dining-image">
+                    <img src="images/gym.jpg" alt="Gym & Tennis">
+                </div>
+                <div class="dining-content">
+                    <h3>Gym & Tennis</h3>
+                    <p>Fitness and fun in one place</p>
+                    <div class="dining-details">
+                        <span><i data-lucide="clock"></i> Gym: 6:30 AM - 6:00 PM | Tennis: Dawn to Dusk</span>
+                    </div>
+                    <button class="btn-book" data-facility="gym-tennis">View Now</button>
+                </div>
+            </div>
+            <div class="dining-card" data-facility="pool">
+                <div class="dining-image">
+                    <img src="images/pool.jpg" alt="Swimming Pool">
+                </div>
+                <div class="dining-content">
+                    <h3>Swimming Pool</h3>
+                    <p>Relax and swim in style</p>
+                    <div class="dining-details">
+                        <span><i data-lucide="clock"></i> 7:00 AM - 6:00 PM</span>
+                    </div>
+                    <button class="btn-book" data-facility="pool">View Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gym & Tennis Popup -->
+    <div class="facility-popup" id="gym-tennis-popup">
+        <div class="popup-content">
+            <button class="close-popup" data-facility="gym-tennis">×</button>
+            <h3><strong>Gym & Tennis</strong></h3>
+            <div class="video-wrapper">
+                <h4><strong>Gym Video</strong></h4>
+                <video controls preload="metadata" height="80px" autoplay loop muted>
+                    <source src="videos/gymcenter.MOV" type="video/mp4" >
+                    Your browser doesn’t support video.
+                </video>
+            </div>
+            <div class="facility-rules">
+                <h4><strong>Gym Rules</strong></h4>
+                <ul>
+                    <li>Wipe equipment after use.</li>
+                    <li>Wear proper gym attire (no sandals).</li>
+                    <li>Kids under 16 need adult supervision.</li>
+                    <li>Store items in lockers.</li>
+                </ul>
+            </div>
+            
+            <div class="video-wrapper">
+                <h4><strong>Tennis Court Video</strong></h4>
+                <video controls preload="metadata"  height="80px" autoplay loop muted>
+                    <source src="videos/Tenis.mp4" type="video/mp4">
+                    Your browser doesn’t support video.
+                </video>
+            </div>
+            <div class="facility-rules">
+                <h4><strong>Tennis Rules</strong></h4>
+                <ul>
+                    <li>Use court shoes only.</li>
+                    <li>No food or drinks on the court.</li>
+                    <li>Book in advance for priority.</li>
+                    <li>Respect time slots.</li>
+                </ul>
+            </div>
+            <a href="tel:+233312290511" class="btn-book"><i class="fas fa-phone"></i> Call Now</a>
+        </div>
+    </div>
+
+    <!-- Pool Popup -->
+    <div class="facility-popup" id="pool-popup">
+        <div class="popup-content">
+            <button class="close-popup" data-facility="pool">×</button>
+            <h3><strong>Swimming Pool</strong></h3>
+            <div class="video-wrapper">
+                <video controls preload="metadata" height="80px" autoplay loop muted>
+                    <source src="videos/WhatsApp Video 2025-02-26 at 09.31.59_11a6d33c.mp4" type="video/mp4">
+                    Your browser doesn’t support video.
+                </video>
+            </div>
+            <div class="facility-rules">
+                <h4><strong>Swimming Pool Rules & Pricing</strong></h4>
+                <ul>
+                    <li>Entrance ticket must be presented at all times.</li>
+                    <li>Children under 12 must be accompanied by an adult at all times.</li>
+                    <li>NO DIVING and NO RUNNING.</li>
+                    <li>Any person know or suspected of having a communicable Disease shall not use the pool.</li>
+                    <li>Do not use the pool while under influence of alcohol or drugs.</li>
+                    <li>All person using the pool do so at their own rist, and responsibility.</li>
+                    <li>The Hotel accepts No liability for injury, death or loss associated with the use of the pool e.g. Articles of clothing, valuables.</li>
+                    <li>No Pets allowed in the pool area.</li>
+                    <li>Floats and Ball playing only allowed in children's pool.</li>
+                    <li>Food and Drinks are not allowed to be brought into the pool.</li><br>
+                    <li><strong>Pricing:</strong> Free for guests | GH₵50/day for non-guests.</li>
+                </ul>
+            </div>
+            <a href="tel:+233312290511" class=" btn-book"><i class="fas fa-phone"></i> Call Now</a>
+        </div>
+    </div>
+</section>
+
+
+       <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Guest Experiences</h2>
+                <p>What our guests say about their stay at Kingstel Hotel</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://www.kingstelhotels.com/images/person2.jpg" alt="Sarah Johnson" class="testimonial-avatar">
+                        <div>
+                            <h3>Natalie Owusu</h3>
+                            <p>Satisfied Customer</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"Having visited there during their grand opening. I think it's one of the Best Hotels in Takoradi. I therefore recommend it to anyone who'd like to enjoy holiday hospitality in grand-style and fashion."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://www.kingstelhotels.com/images/person1.jpg" alt="Michael Chen" class="testimonial-avatar">
+                        <div>
+                            <h3>Brian Okechukwu</h3>
+                            <p>Satisfied Customer</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"I call Kingstel Hotel my second home because I always feel at home in the serene environment and pleasant staff."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://www.kingstelhotels.com/images/person3.jpg" alt="Emma Davis" class="testimonial-avatar">
+                        <div>
+                            <h3>Tom Jones</h3>
+                            <p>Satisfied Customer</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">"Never thought there was such a high-class hotel with such great facilities in this part of Ghana. Love it!."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for exclusive offers and updates</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <div class="input-group">
+                        <i data-lucide="mail"></i>
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+                    <button type="submit" class="btn-subscribe">
+                        Subscribe
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-header">
+            <div class="logo">
+                <i class="fas fa-rocket"></i> <span>Kingstel Assistant</span>
+            </div>
+            <button id="close-btn" aria-label="Close chat">×</button>
+        </div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <div class="chat-icon" id="chat-icon">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    <div class="chat-popup" id="chat-popup">Hi! How can I assist you today?</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3 class="logo" style="color: #dddcdc;">Kingstel Hotel</h3>
+                    <p >Kingstel Hotel is a 3 Star hotel located in a very plush area of Sekondi-Takoradi, the Oil City of Ghana perfected for the business and leisure traveler.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/kingstelhotels?igsh=MWRwNng2bHlwZGRwcg=="><i data-lucide="instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1BzWdY547p/"><i data-lucide="facebook"></i></a>
+                        <a href="https://x.com/HotelKingstel?t=kqI5Vw9EIqo2rFRP9g3XoQ&s=09"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#rooms">Rooms & Suites</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="conference.html">Conference</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                
+                <div  class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i data-lucide="map-pin"></i>Dupaul Road,Apollo Traffic Lights, 
+                            Takoradi - Ghana</li>
+                        <li><i data-lucide="phone"></i>+233312290511</li>
+                        <li><i data-lucide="mail"></i> kingstelhotel@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 All rights reserved | Powered by <a href="https://wa.me/0599210911">AniTech</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+  
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+    <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="module" src="popUp.js"></script>
+  
+     
+  
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+
+
+        
+   <script>
+    
+   </script>
+ 
+
+<script>
+    const menuData = {
+        mains: [
+            { name: 'Grilled Pork', description: 'Meat / Potatoes / Rice', price: '₵130.00', image: 'images/Grilled Pork.jpg' },
+            { name: 'Tuna Roast Source', description: 'Tuna / Potatoes / Rice', price: '₵140.00', image: 'images/Tuna Roast.jpg' },
+            { name: 'Roast Beef (4 sticks)', description: 'Crab / Potatoes / Rice', price: '₵120.00', image: 'images/Roast Beef (4 sticks).jpg' },
+            { name: 'Salted Fried Chicken', description: 'Crab / Potatoes / Rice', price: '₵100.00', image: 'images/Salted Fried Chicken.jpg' },
+        ],
+        desserts: [
+            { name: 'Full Cake(Small Size)', description: 'Dark Chocolate / Cream', price: '₵700.00', image: 'images/Chocolate Cake.jpg' },
+            { name: 'Fruit Salad', description: 'Mixed Fruits / Yogurt', price: '₵30.00', image: 'images/Fruit Salad.jpg' },
+            { name: 'Ice Cream', description: 'Vanilla / Chocolate / Strawberry', price: '₵30.00', image: 'images/Ice Cream.jpg' },
+        ],
+        drinks: [
+            { name: 'Smirnoff Red', description: 'Juicy Taste ', price: '₵14.00', image: 'https://i.pinimg.com/736x/92/ff/f9/92fff9cfa5c3691ede3ccd966e24ad69.jpg' },
+            { name: 'Absolute 100', description: 'super-premium 100 proof vodka', price: '₵16.00', image: 'https://i.pinimg.com/736x/94/30/11/94301105b9cfd20d8a33ebc5f1f3cf52.jpg' },
+            { name: 'Absolute Citron', description: 'Mixed Fruits / Alcohol', price: '₵16.00', image: 'https://i.pinimg.com/736x/bd/1f/aa/bd1faaa8d1a8a3ac8c46fe3ea9bf9936.jpg' },
+        ]
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const featuredDish = document.getElementById("featured-dish");
+        const menuItems = document.getElementById("menu-items");
+        const categories = document.querySelectorAll(".category");
+
+        function loadMenuItems(category) {
+            menuItems.innerHTML = "";
+            menuData[category].forEach(item => {
+                const menuItem = document.createElement("li");
+                menuItem.className = "menu-item";
+                menuItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <h4>${item.name}</h4>
+                    <p>${item.description}</p>
+                    <div class="price">${item.price}</div>
+                `;
+                menuItem.addEventListener("click", () => {
+                    featuredDish.style.backgroundImage = `url('${item.image}')`;
+                    featuredDish.innerHTML = `
+                        <h2>${item.name}</h2>
+                        <p>${item.description}</p>
+                        <div class="price">${item.price}</div>
+                    `;
+                });
+                menuItems.appendChild(menuItem);
+            });
+        }
+
+        categories.forEach(category => {
+            category.addEventListener("click", () => {
+                document.querySelector(".category.active").classList.remove("active");
+                category.classList.add("active");
+                loadMenuItems(category.dataset.category);
+            });
+        });
+
+        loadMenuItems("mains");
+    });
+</script>
+
+
+<script>
+// Chatbot Configuration
+const chatWidget = document.getElementById('chat-widget');
+const chatIcon = document.getElementById('chat-icon');
+const chatBody = document.getElementById('chat-body');
+const chatPopup = document.getElementById('chat-popup');
+const userInput = document.getElementById('user-input');
+const sendBtn = document.getElementById('send-btn');
+const closeBtn = document.getElementById('close-btn');
+
+
+
+
+// Predefined Questions and Answers
+const predefinedQA = [
+    {
+        keywords: ['room price', 'cost', 'how much', 'rates', 'room prices'],
+        answer: '<strong>Room Rates at Kingstel Hotel:</strong><br><br>' +
+                '- <strong>Standard Room:</strong> GH₵700/night<br>' +
+                '- <strong>Deluxe Room:</strong> GH₵850/night<br>' +
+                '- <strong>Super Deluxe:</strong> GH₵1,000/night<br>' +
+                '- <strong>Mini Suite:</strong> GH₵1,100/night<br>' +
+                '- <strong>Executive Suite:</strong> GH₵2,700/night<br><br>' +
+                'Interested in availability or room specifics?',
+        quickReplies: ['Check Availability', 'Room Types', 'Special Offers', 'Back to Menu']
+    },
+    {
+        keywords: ['swimming pool', 'pool'],
+        answer: 'Our modern swimming pool is open daily from 6:00 AM to 10:00 PM—perfect for a swim or poolside relaxation. Want more details?',
+        quickReplies: ['Pool Details', 'Back to Menu']
+    },
+    {
+        keywords: ['hello', 'hi', 'hey'],
+        answer: 'Hi! 👋 I’m Kingstel Hotel Assistant, here to make your stay exceptional. How can I assist you today?',
+        quickReplies: ['Room Prices', 'Amenities', 'Book a Room', 'Hotel Location', 'Special Offers']
+    },
+    {
+        keywords: ['location', 'where is the hotel', 'hotel location', 'address'],
+        answer: 'Kingstel Hotel is located in the vibrant heart of Sekondi-Takoradi, Ghana’s oil city. Our address:<br><br>' +
+                '- <strong>Dupaul Road, Apollo Traffic Lights, Takoradi, Ghana</strong><br><br>' +
+                'It’s a 10-minute drive from Market Circle and 2.6 miles (12-minute taxi) from Takoradi Airport. Need directions or transport help?',
+        quickReplies: ['Get Directions', 'Transportation', 'Back to Menu']
+    },
+    {
+        keywords: ['get directions', 'directions', 'direction', 'how to get there'],
+        answer: 'Finding us is easy! Search "Kingstel Hotel, Takoradi, Ghana" on Google Maps. From Market Circle, head east towards Airport Junction—we’re near Apollo Traffic Lights.<br><br>' +
+                'Need more navigation tips?',
+        quickReplies: ['Yes, More Help', 'Back to Menu']
+    },
+    {
+        keywords: ['yes, more help', 'more help'],
+        answer: 'Happy to assist! If you’re driving, follow Airport Road from Takoradi Airport and turn left at Apollo Traffic Lights. Walking from Market Circle? It’s about 2 miles east. Still need help?',
+        quickReplies: ['Contact Us', 'Back to Menu']
+    },
+    {
+        keywords: ['transportation', 'transport', 'getting around'],
+        answer: 'Travel made simple! Enjoy our free 24-hour airport shuttle from Takoradi Airport—call +233312290511 to book. Taxis from the airport take ~12 minutes, costing GH₵20-30.<br><br>' +
+                'Schedule your shuttle?',
+        quickReplies: ['Book Shuttle', 'Local Transport', 'Back to Menu']
+    },
+    {
+        keywords: ['book shuttle'],
+        answer: 'To book your free shuttle, call +233312290511 with your arrival details. We’ll pick you up at Takoradi Airport 24/7!<br><br>' +
+                'Anything else?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['local transport', 'taxi', 'public transport'],
+        answer: 'Taxis are plentiful in Takoradi—expect GH₵20-30 from the airport or GH₵10-15 around town. Public tro-tros (minibuses) are also available for a cheaper ride.<br><br>' +
+                'Need a taxi now?',
+        quickReplies: ['Arrange Taxi', 'Back to Menu']
+    },
+    {
+        keywords: ['arrange taxi'],
+        answer: 'We can arrange a taxi for you! Call the front desk at +233312290511 with your pickup time and destination.<br><br>' +
+                'Set it up?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['room type', 'types of rooms', 'room types'],
+        answer: '<strong>Our Stylish Room Options:</strong><br><br>' +
+                '- <strong>Standard Room:</strong> Cozy comfort<br>' +
+                '- <strong>Deluxe Room:</strong> Spacious sophistication<br>' +
+                '- <strong>Super Deluxe:</strong> Luxe living<br>' +
+                '- <strong>Mini Suite:</strong> Roomy elegance<br>' +
+                '- <strong>Executive Suite:</strong> Premium indulgence<br><br>' +
+                'Pick a room for more details!',
+        quickReplies: ['Standard Room', 'Deluxe Room', 'Super Deluxe', 'Mini Suite', 'Executive Suite', 'Back to Menu']
+    },
+    {
+        keywords: ['standard room'],
+        answer: '<strong>Standard Room:</strong><br><br>' +
+                'Perfect for solo travelers or couples, this cozy retreat offers a queen-sized bed, free high-speed Wi-Fi, air conditioning, a 32" Smart TV, and a modern bathroom with premium toiletries. Rate: GH₵700/night.<br><br>' +
+                'Book it or explore more?',
+        quickReplies: ['Book Now', 'Room Prices', 'View Photos', 'Back to Menu']
+    },
+    {
+        keywords: ['deluxe room'],
+        answer: '<strong>Deluxe Room:</strong><br><br>' +
+                'Enjoy spacious elegance with a king-sized bed, extra seating, and a workspace. Includes all Standard Room amenities plus a mini-fridge and city or garden views. Rate: GH₵850/night.<br><br>' +
+                'Reserve this or see more?',
+        quickReplies: ['Book Now', 'Room Prices', 'View Photos', 'Back to Menu']
+    },
+    {
+        keywords: ['super deluxe'],
+        answer: '<strong>Super Deluxe:</strong><br><br>' +
+                'Luxury awaits with a king or twin beds, panoramic views, and a spacious living area. Includes Executive Lounge access with free breakfast and cocktails. Rate: GH₵1,000/night.<br><br>' +
+                'Secure this now?',
+        quickReplies: ['Book Now', 'Room Prices', 'View Photos', 'Back to Menu']
+    },
+    {
+        keywords: ['mini suite'],
+        answer: '<strong>Mini Suite:</strong><br><br>' +
+                'Unwind in style with a separate living and sleeping area, luxe bathroom with bathtub, and extras like a coffee machine, large Smart TV, and private balcony. Rate: GH₵1,100/night.<br><br>' +
+                'Book this suite?',
+        quickReplies: ['Book Now', 'Room Prices', 'View Photos', 'Back to Menu']
+    },
+    {
+        keywords: ['executive suite'],
+        answer: '<strong>Executive Suite:</strong><br><br>' +
+                'The ultimate luxury! Features a full living room, dining area, kitchenette, and king-sized master bedroom. Includes butler service, free spa treatments, and priority check-in. Rate: GH₵2,700/night.<br><br>' +
+                'Reserve this premium stay?',
+        quickReplies: ['Book Now', 'Room Prices', 'View Photos', 'Back to Menu']
+    },
+    {
+        keywords: ['amenities', 'services', 'facilities'],
+        answer: '<strong>Premium Amenities:</strong><br><br>' +
+                '- Free High-Speed Wi-Fi<br>' +
+                '- Swimming Pool<br>' +
+                '- Fitness Center<br>' +
+                '- Spa Services<br>' +
+                '- Fine Dining Restaurants<br>' +
+                '- Conference Rooms<br>' +
+                '- Tennis Court<br><br>' +
+                'Explore any of these?',
+        quickReplies: ['Pool Details', 'Gym Details', 'Tennis Court Details', 'Spa Services', 'Restaurants', 'Back to Menu']
+    },
+    {
+        keywords: ['gym', 'fitness center', 'gym details'],
+        answer: '<strong>Fitness Center:</strong><br><br>' +
+                'Open 6:30 AM to 10:00 PM with state-of-the-art equipment, free weights, cardio machines, and personal training (GH₵50/hour). Free for guests—use your room key!<br><br>' +
+                'Plan a workout?',
+        quickReplies: ['Personal Training', 'Gym Hours', 'Back to Menu']
+    },
+    {
+        keywords: ['personal training'],
+        answer: '<strong>Personal Training:</strong><br><br>' +
+                'Book a session with our expert trainers for GH₵50/hour. Call +233312290511 to schedule!<br><br>' +
+                'Set a time?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['gym hours'],
+        answer: '<strong>Gym Hours:</strong><br><br>' +
+                'Our fitness center is open daily from 6:30 AM to 10:00 PM—plenty of time to stay fit!<br><br>' +
+                'Anything else?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['pool details', 'pool hours', 'swimming pool'],
+        answer: '<strong>Swimming Pool:</strong><br><br>' +
+                'Open 6:00 AM to 10:00 PM daily. Free for guests (GH₵50/day for non-guests), with towels provided. Perfect for a swim or lounging!<br><br>' +
+                'More pool info?',
+        quickReplies: ['Pool Rules', 'Back to Menu']
+    },
+    {
+        keywords: ['pool rules'],
+        answer: '<strong>Pool Rules:</strong><br><br>' +
+                '- No diving<br>' +
+                '- Kids under 12 need adult supervision<br>' +
+                '- No food or glassware<br><br>' +
+                'All set for a swim?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['tennis court', 'tennis', 'tennis court details'],
+        answer: '<strong>Tennis Court:</strong><br><br>' +
+                'Open dawn to dusk. Free for guests (GH₵50/hour for non-guests), with racket/ball rentals at GH₵10/set from reception.<br><br>' +
+                'Book a court or lessons?',
+        quickReplies: ['Book a Court', 'Tennis Lessons', 'Back to Menu']
+    },
+    {
+        keywords: ['book a court'],
+        answer: '<strong>Book a Tennis Court:</strong><br><br>' +
+                'Reserve your spot by calling +233312290511 or visiting the front desk. Free for guests!<br><br>' +
+                'Set a time?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['tennis lessons'],
+        answer: '<strong>Tennis Lessons:</strong><br><br>' +
+                'Learn from our pro coach for GH₵100/hour. Book via +233312290511!<br><br>' +
+                'Schedule a lesson?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['book a room', 'booking', 'reserve', 'book now'],
+        answer: '<strong>Book Your Stay:</strong><br><br>' +
+                'Click "Book Now" to jump to our booking form, or call +233312290511 for assistance!<br><br>' +
+                'Need help choosing a room?',
+        quickReplies: ['Book Now', 'Check Availability', 'Room Types', 'Back to Menu']
+    },
+    {
+        keywords: ['check availability'],
+        answer: '<strong>Check Availability:</strong><br><br>' +
+                '- Visit <a href="https://www.kingstelhotel.com" target="_blank">kingstelhotel.com</a> and use "Book Now" with your dates.<br>' +
+                '- Call +233312290511 for instant updates.<br><br>' +
+                'Explore rooms or deals next?',
+        quickReplies: ['Room Types', 'Special Offers', 'Book Now', 'Back to Menu']
+    },
+    {
+        keywords: ['special offers', 'deals', 'promotions'],
+        answer: '<strong>Special Offers:</strong><br><br>' +
+                '- Stay 3 nights, get 10% off!<br>' +
+                '- Book direct for a free spa voucher.<br><br>' +
+                'Claim a deal now?',
+        quickReplies: ['Book Now', 'More Offers', 'Back to Menu']
+    },
+    {
+        keywords: ['more offers'],
+        answer: '<strong>More Offers:</strong><br><br>' +
+                '- Weekend Getaway: GH₵200 off Deluxe Rooms (Fri-Sun).<br>' +
+                '- Family Package: Free breakfast for kids under 12.<br><br>' +
+                'Book one of these?',
+        quickReplies: ['Book Now', 'Back to Menu']
+    },
+    {
+        keywords: ['cancellation policy', 'cancel', 'refund'],
+        answer: '<strong>Cancellation Policy:</strong><br><br>' +
+                'Cancel free up to 24 hours before check-in. Need details? Call +233312290511.<br><br>' +
+                'Any questions?',
+        quickReplies: ['Contact Us', 'Back to Menu']
+    },
+    {
+        keywords: ['airport shuttle', 'shuttle service'],
+        answer: '<strong>Airport Shuttle:</strong><br><br>' +
+                'Free 24-hour shuttle from Takoradi Airport—call +233312290511 to book!<br><br>' +
+                'Arrange your ride?',
+        quickReplies: ['Book Shuttle', 'Back to Menu']
+    },
+    {
+        keywords: ['check-in time', 'check-out time', 'check-in', 'check-out'],
+        answer: '<strong>Check-In/Check-Out:</strong><br><br>' +
+                'Check-in: 2:00 PM | Check-out: 12:00 PM. Flexible options available on request!<br><br>' +
+                'Need to adjust?',
+        quickReplies: ['Early Check-In', 'Late Check-Out', 'Back to Menu']
+    },
+    {
+        keywords: ['early check-in'],
+        answer: '<strong>Early Check-In:</strong><br><br>' +
+                'Possible if rooms are free—fee may apply. Check with the front desk a day ahead.<br><br>' +
+                'Request it?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['late check-out'],
+        answer: '<strong>Late Check-Out:</strong><br><br>' +
+                'Available if rooms allow—fee may apply. Ask the front desk a day prior.<br><br>' +
+                'Stay longer?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['parking', 'car park', 'parking facility'],
+        answer: '<strong>Parking:</strong><br><br>' +
+                'Free, secure 24/7 parking for all guests—no booking needed!<br><br>' +
+                'Anything else?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['restaurant', 'dining', 'food', 'restaurants'],
+        answer: '<strong>Dining Options:</strong><br><br>' +
+                '- <strong>The Grand Restaurant:</strong> Fine dining, global cuisine, 7:00 AM - 11:00 PM.<br>' +
+                '- <strong>Skyline Lounge:</strong> Casual dining with views, same hours.<br><br>' +
+                'Craving more info?',
+        quickReplies: ['Menu', 'Reservations', 'Back to Menu']
+    },
+    {
+        keywords: ['menu'],
+        answer: '<strong>Restaurant Menu:</strong><br><br>' +
+                'Enjoy local and international dishes! View our full menu at kingstelhotel.com or ask at the restaurant.<br><br>' +
+                'Order now?',
+        quickReplies: ['Order Now', 'Back to Menu']
+    },
+    {
+        keywords: ['reservations', 'book a table'],
+        answer: '<strong>Dining Reservations:</strong><br><br>' +
+                'Book a table by calling +233312290511 or visiting the front desk—recommended for peak times!<br><br>' +
+                'Reserve now?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['spa', 'massage', 'spa services'],
+        answer: '<strong>Spa Services:</strong><br><br>' +
+                'Open 9:00 AM to 8:00 PM with massages, facials, and treatments.<br><br>' +
+                'Book a session?',
+        quickReplies: ['Book Spa', 'Spa Packages', 'Back to Menu']
+    },
+    {
+        keywords: ['book spa'],
+        answer: '<strong>Book a Spa Session:</strong><br><br>' +
+                'Call +233312290511 or stop by the spa to schedule your relaxation time!<br><br>' +
+                'Set it up?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+
+    //what available, spa packages, buffer, special dishes available, dining services, brada services, holiday
+    {
+        keywords: ['spa packages', 'spa deals'],
+        answer: '<strong>Spa Packages:</strong><br><br>' +
+                '- Relaxation Package: GH₵150 (massage + facial)<br>' +
+                '- Full Day Package: GH₵300 (full treatment)<br><br>' +
+                'Interested in booking a package?',
+        quickReplies: ['Book Spa', 'Back to Menu']
+    },
+    {
+        keywords: ['spa packages'],
+        answer: '<strong>Spa Packages:</strong><br><br>' +
+                '- Relaxation: GH₵150 (massage + facial)<br>' +
+                '- Full Day: GH₵300 (full treatment)<br><br>' +
+                'Book a package?',
+        quickReplies: ['Book Spa', 'Back to Menu']
+    },
+    {
+        keywords: ['contact', 'number', 'reach', 'phone', 'email'],
+        answer: '<strong>Contact Us:</strong><br><br>' +
+                '- <strong>Phone:</strong> +233312290511<br>' +
+                '- <strong>Email:</strong> kingstelhotel@gmail.com<br>' +
+                '- <strong>Address:</strong> Dupaul Road, Apollo Traffic Lights, Takoradi, Ghana<br><br>' +
+                'Need more help?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['thank you', 'thanks', 'thank u'],
+        answer: 'You’re welcome! 😊 Happy to assist—anything else?',
+        quickReplies: ['Yes, More Questions', 'No, Thanks']
+    },
+    {
+        keywords: ['yes, more questions', 'yes'],
+        answer: 'Great! What else can I help you with?',
+        quickReplies: ['Room Prices', 'Amenities', 'Book a Room', 'Hotel Location', 'Back to Menu']
+    },
+    {
+        keywords: ['no, thanks', 'no'],
+        answer: 'Alright, enjoy your day! I’m here if you need me later!',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['ok', 'okay', 'k'],
+        answer: 'Cool! Anything else on your mind?',
+        quickReplies: ['Yes', 'No', 'Back to Menu']
+    },
+    {
+        keywords: ['cool', 'nice', 'great'],
+        answer: 'Glad you think so! What’s next?',
+        quickReplies: ['Room Prices', 'Amenities', 'Back to Menu']
+    },
+    {
+        keywords: ['sure', 'fine'],
+        answer: 'Perfect! How can I assist you further?',
+        quickReplies: ['Book a Room', 'Check Availability', 'Back to Menu']
+    },
+    {
+        keywords: ['breakfast', 'meal plan'],
+        answer: '<strong>Breakfast:</strong><br><br>' +
+                'Free daily from 6:30 AM to 10:00 AM—continental and buffet options included!<br><br>' +
+                'See the menu?',
+        quickReplies: ['Breakfast Menu', 'Back to Menu']
+    },
+    {
+        keywords: ['breakfast menu'],
+        answer: '<strong>Breakfast Menu:</strong><br><br>' +
+                'Enjoy pastries, fruits, eggs, and local dishes—full menu at the restaurant!<br><br>' +
+                'Anything else?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['wifi', 'internet', 'connection'],
+        answer: '<strong>Wi-Fi:</strong><br><br>' +
+                'Free high-speed Wi-Fi everywhere—connect to "Kingstel-Guest," no password!<br><br>' +
+                'All connected?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['room service', 'in-room dining'],
+        answer: '<strong>Room Service:</strong><br><br>' +
+                'Available 7:00 AM to 10:00 PM with local and global dishes.<br><br>' +
+                'Order now?',
+        quickReplies: ['See Menu', 'Order Now', 'Back to Menu']
+    },
+    {
+        keywords: ['see menu', 'room service menu'],
+        answer: '<strong>Room Service Menu:</strong><br><br>' +
+                'From local stews to international classics—call +233312290511 to order!<br><br>' +
+                'Place an order?',
+        quickReplies: ['Order Now', 'Back to Menu']
+    },
+    {
+        keywords: ['order now'],
+        answer: '<strong>Order Now:</strong><br><br>' +
+                'Call +233312290511 with your room number and order—delivered 7:00 AM to 10:00 PM!<br><br>' +
+                'Need the menu again?',
+        quickReplies: ['See Menu', 'Back to Menu']
+    },
+    {
+        keywords: ['luggage storage', 'baggage'],
+        answer: '<strong>Luggage Storage:</strong><br><br>' +
+                'Free storage at reception anytime before or after your stay.<br><br>' +
+                'Need this service?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['safety', 'safe', 'security box', 'valuables'],
+        answer: '<strong>Safety:</strong><br><br>' +
+                'Rooms include an in-room safe, and we offer a reception safe for larger items.<br><br>' +
+                'Feel secure?',
+        quickReplies: ['Hotel Security', 'Back to Menu']
+    },
+    {
+        keywords: ['hotel security', 'security'],
+        answer: '<strong>Hotel Security:</strong><br><br>' +
+                '24/7 staff and CCTV ensure your safety—report any concerns to the front desk!<br><br>' +
+                'All good?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['pet friendly', 'pets', 'pet policy'],
+        answer: '<strong>Pet Policy:</strong><br><br>' +
+                'Pets welcome for GH₵50/night in designated rooms—let us know at booking!<br><br>' +
+                'Bringing a pet?',
+        quickReplies: ['Book a Pet Room', 'Pet Rules', 'Back to Menu']
+    },
+    {
+        keywords: ['book a pet room'],
+        answer: '<strong>Pet Room Booking:</strong><br><br>' +
+                'Call +233312290511 to reserve a pet-friendly room—GH₵50/night extra.<br><br>' +
+                'Book now?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['pet rules'],
+        answer: '<strong>Pet Rules:</strong><br><br>' +
+                '- Keep pets on a leash in public areas.<br>' +
+                '- No pets on furniture.<br>' +
+                '- Owners responsible for cleanup.<br><br>' +
+                'All clear?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['minibar', 'snacks', 'drinks in room'],
+        answer: '<strong>Minibar:</strong><br><br>' +
+                'Rooms come with a stocked minibar—refills or requests? Just ask!<br><br>' +
+                'Need something?',
+        quickReplies: ['Minibar Menu', 'Request Item', 'Back to Menu']
+    },
+    {
+        keywords: ['minibar menu'],
+        answer: '<strong>Minibar Menu:</strong><br><br>' +
+                '- Soft Drinks: GH₵10<br>' +
+                '- Snacks: GH₵15<br>' +
+                '- Beer: GH₵20<br><br>' +
+                'Want anything?',
+        quickReplies: ['Request Item', 'Back to Menu']
+    },
+    {
+        keywords: ['request item'],
+        answer: '<strong>Request Minibar Item:</strong><br><br>' +
+                'Call +233312290511 to add items to your minibar!<br><br>' +
+                'What do you need?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['laundry service', 'dry cleaning', 'laundry'],
+        answer: '<strong>Laundry Service:</strong><br><br>' +
+                'Items collected and returned within 24 hours—use your in-room laundry bag!<br><br>' +
+                'Need laundry done?',
+        quickReplies: ['Laundry Pricing', 'Request Laundry', 'Back to Menu']
+    },
+    {
+        keywords: ['laundry pricing'],
+        answer: '<strong>Laundry Pricing:</strong><br><br>' +
+                '- Shirts: GH₵15<br>' +
+                '- Pants: GH₵20<br>' +
+                '- Dry Cleaning: GH₵30/item<br><br>' +
+                'Send something?',
+        quickReplies: ['Request Laundry', 'Back to Menu']
+    },
+    {
+        keywords: ['request laundry'],
+        answer: '<strong>Request Laundry:</strong><br><br>' +
+                'Fill your in-room laundry bag and call +233312290511—returned in 24 hours!<br><br>' +
+                'Ready?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['local attractions', 'things to do', 'tourist spots'],
+        answer: '<strong>Takoradi Attractions:</strong><br><br>' +
+                '- <strong>Ankasa Conservation Area:</strong> Nature haven.<br>' +
+                '- <strong>Fort Orange:</strong> Historic landmark.<br>' +
+                '- <strong>Beaches:</strong> Sun and sand nearby.<br><br>' +
+                'Plan a visit?',
+        quickReplies: ['Book a Tour', 'More Attractions', 'Back to Menu']
+    },
+    {
+        keywords: ['book a tour'],
+        answer: '<strong>Book a Tour:</strong><br><br>' +
+                'Call +233312290511 or visit the front desk to arrange a tour!<br><br>' +
+                'Which spot?',
+        quickReplies: ['Ankasa', 'Fort Orange', 'Beaches', 'Back to Menu']
+    },
+    {
+        keywords: ['ankasa'],
+        answer: '<strong>Ankasa Conservation Area:</strong><br><br>' +
+                'A lush nature reserve ~1 hour from the hotel—perfect for hiking and wildlife!<br><br>' +
+                'Book this tour?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['fort orange'],
+        answer: '<strong>Fort Orange:</strong><br><br>' +
+                'Historic fort just 15 minutes away—great for a quick history trip!<br><br>' +
+                'Book this tour?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['beaches'],
+        answer: '<strong>Takoradi Beaches:</strong><br><br>' +
+                'Relax on sandy shores just a short drive from us!<br><br>' +
+                'Book a beach trip?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['more attractions'],
+        answer: '<strong>More Attractions:</strong><br><br>' +
+                '- <strong>Market Circle:</strong> Bustling local market.<br>' +
+                '- <strong>Sekondi Fishing Harbour:</strong> Scenic waterfront.<br><br>' +
+                'Visit one?',
+        quickReplies: ['Market Circle', 'Sekondi Harbour', 'Back to Menu']
+    },
+    {
+        keywords: ['market circle'],
+        answer: '<strong>Market Circle:</strong><br><br>' +
+                '10 minutes away—a vibrant spot for shopping and local culture!<br><br>' +
+                'Plan a visit?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['sekondi harbour', 'sekondi fishing harbour'],
+        answer: '<strong>Sekondi Fishing Harbour:</strong><br><br>' +
+                'A picturesque waterfront ~20 minutes away—perfect for photos!<br><br>' +
+                'Plan a visit?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['smoking', 'non-smoking', 'smoking policy'],
+        answer: '<strong>Smoking Policy:</strong><br><br>' +
+                'We’re non-smoking with outdoor areas available. Need a smoking room? Ask ahead!<br><br>' +
+                'All set?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['events', 'weddings', 'conferences', 'event planning'],
+        answer: '<strong>Events & Conferences:</strong><br><br>' +
+                'Two banquet halls for up to 500 guests—ideal for weddings or meetings. Our team ensures perfection!<br><br>' +
+                'Planning an event?',
+        quickReplies: ['Event Packages', 'Wedding Info', 'Contact Events Team', 'Back to Menu']
+    },
+    {
+        keywords: ['event packages'],
+        answer: '<strong>Event Packages:</strong><br><br>' +
+                '- Basic: GH₵500 (room + setup)<br>' +
+                '- Premium: GH₵1,000 (catering included)<br><br>' +
+                'Book a package?',
+        quickReplies: ['Contact Events Team', 'Back to Menu']
+    },
+    {
+        keywords: ['wedding info'],
+        answer: '<strong>Wedding Info:</strong><br><br>' +
+                'Host your dream wedding with us—custom decor, catering, and more! Call +233312290511 for details.<br><br>' +
+                'Plan your big day?',
+        quickReplies: ['Contact Events Team', 'Back to Menu']
+    },
+    {
+        keywords: ['contact events team'],
+        answer: '<strong>Contact Events Team:</strong><br><br>' +
+                'Call +233312290511 or email kingstelhotel@gmail.com to plan your event!<br><br>' +
+                'Reach out now?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['feedback', 'complaint', 'suggestion'],
+        answer: '<strong>We Value Your Feedback:</strong><br><br>' +
+                'Share thoughts or concerns with our manager or email kingstelhotel@gmail.com.<br><br>' +
+                'What’s your feedback?',
+        quickReplies: ['Contact Us', 'Back to Menu']
+    },
+    {
+        keywords: ['wake up call', 'alarm'],
+        answer: '<strong>Wake-Up Call:</strong><br><br>' +
+                'Set a wake-up call anytime via the front desk—just tell us when!<br><br>' +
+                'Need one?',
+        quickReplies: ['Set Time', 'Back to Menu']
+    },
+    {
+        keywords: ['set time'],
+        answer: '<strong>Set Wake-Up Time:</strong><br><br>' +
+                'Call +233312290511 with your preferred time—we’ll wake you up!<br><br>' +
+                'All set?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['towels', 'extra towels', 'bath amenities'],
+        answer: '<strong>Bath Amenities:</strong><br><br>' +
+                'Need extra towels or toiletries? Call the front desk or use your room’s housekeeping button!<br><br>' +
+                'Request now?',
+        quickReplies: ['Request Now', 'Back to Menu']
+    },
+    {
+        keywords: ['request now'],
+        answer: '<strong>Request Items:</strong><br><br>' +
+                'Call +233312290511 or press the housekeeping button—we’ll deliver ASAP!<br><br>' +
+                'What do you need?',
+        quickReplies: ['Towels', 'Toiletries', 'Back to Menu']
+    },
+    {
+        keywords: ['lost and found', 'lost item', 'lost something'],
+        answer: '<strong>Lost & Found:</strong><br><br>' +
+                'Lost something? Contact the front desk—we hold items for 30 days.<br><br>' +
+                'Missing an item?',
+        quickReplies: ['Report Lost Item', 'Back to Menu']
+    },
+    {
+        keywords: ['report lost item'],
+        answer: '<strong>Report Lost Item:</strong><br><br>' +
+                'Call +233312290511 with a description—we’ll check our lost and found!<br><br>' +
+                'What did you lose?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['payment methods', 'credit card', 'cash', 'how to pay'],
+        answer: '<strong>Payment Options:</strong><br><br>' +
+                'We accept major credit cards, cash, and mobile payments—pay at check-in or out.<br><br>' +
+                'Any payment questions?',
+        quickReplies: ['Payment Details', 'Back to Menu']
+    },
+    {
+        keywords: ['payment details'],
+        answer: '<strong>Payment Details:</strong><br><br>' +
+                'Cards: Visa, MasterCard, etc. | Mobile: MTN, Vodafone | Cash: GH₵ accepted.<br><br>' +
+                'All clear?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['room upgrade', 'upgrade room'],
+        answer: '<strong>Room Upgrades:</strong><br><br>' +
+                'Upgrades subject to availability—check with us for options and rates!<br><br>' +
+                'Upgrade now?',
+        quickReplies: ['Check Availability', 'Upgrade Details', 'Back to Menu']
+    },
+    {
+        keywords: ['upgrade details'],
+        answer: '<strong>Upgrade Details:</strong><br><br>' +
+                '- Deluxe: +GH₵150/night<br>' +
+                '- Suite: +GH₵400/night<br><br>' +
+                'Upgrade today?',
+        quickReplies: ['Book Now', 'Back to Menu']
+    },
+    {
+        keywords: ['business center', 'printing', 'fax', 'work facilities'],
+        answer: '<strong>Business Center:</strong><br><br>' +
+                'Open 24/7 with computers, printing, scanning, and faxing—perfect for work needs.<br><br>' +
+                'Need to print?',
+        quickReplies: ['Printing Help', 'Back to Menu']
+    },
+    {
+        keywords: ['printing help'],
+        answer: '<strong>Printing Help:</strong><br><br>' +
+                'Visit the business center or call +233312290511—we’ll assist with printing!<br><br>' +
+                'Print now?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['lost key', 'room key', 'key card'],
+        answer: '<strong>Lost Key:</strong><br><br>' +
+                'Misplaced your key? Visit the front desk for a new card—we’ll secure your room!<br><br>' +
+                'Get a new one?',
+        quickReplies: ['Get New Key', 'Back to Menu']
+    },
+    {
+        keywords: ['get new key'],
+        answer: '<strong>Get New Key:</strong><br><br>' +
+                'Head to the front desk with your ID—we’ll issue a new key right away!<br><br>' +
+                'All set?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['late check-out', 'extend checkout'],
+        answer: '<strong>Late Check-Out:</strong><br><br>' +
+                'Available if rooms permit—fee may apply. Ask the front desk a day prior.<br><br>' +
+                'Extend your stay?',
+        quickReplies: ['Request Late Check-Out', 'Back to Menu']
+    },
+    {
+        keywords: ['request late check-out'],
+        answer: '<strong>Request Late Check-Out:</strong><br><br>' +
+                'Call +233312290511 the day before—we’ll confirm based on availability!<br><br>' +
+                'When do you want to leave?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['early check-in', 'check in early'],
+        answer: '<strong>Early Check-In:</strong><br><br>' +
+                'Possible if rooms are free—fee may apply. Check with us a day ahead.<br><br>' +
+                'Arriving early?',
+        quickReplies: ['Request Early Check-In', 'Back to Menu']
+    },
+    {
+        keywords: ['request early check-in'],
+        answer: '<strong>Request Early Check-In:</strong><br><br>' +
+                'Call +233312290511 a day before—we’ll arrange if possible!<br><br>' +
+                'When are you arriving?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['are you human', 'human being', 'you a human'],
+        answer: '<strong>About Me:</strong><br><br>' +
+                'I’m Kingstel Assistant, an AI by AniTech Ghana, here to help you like a pro!<br><br>' +
+                'What’s next?',
+        quickReplies: ['Ask Anything', 'Back to Menu']
+    },
+    {
+        keywords: ['ask anything'],
+        answer: 'Go ahead—ask me anything about Kingstel Hotel!',
+        quickReplies: ['Room Prices', 'Amenities', 'Back to Menu']
+    },
+    {
+        keywords: ['room cleaning', 'housekeeping', 'clean room'],
+        answer: '<strong>Housekeeping:</strong><br><br>' +
+                'Daily cleaning from 9:00 AM to 5:00 PM. Need a refresh? Use your room’s button or call!<br><br>' +
+                'Schedule now?',
+        quickReplies: ['Request Cleaning', 'Back to Menu']
+    },
+    {
+        keywords: ['request cleaning'],
+        answer: '<strong>Request Cleaning:</strong><br><br>' +
+                'Call +233312290511 or press your room’s housekeeping button—we’ll clean between 9:00 AM and 5:00 PM!<br><br>' +
+                'When do you want it?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['room temperature', 'ac', 'heating', 'air conditioning'],
+        answer: '<strong>Room Climate:</strong><br><br>' +
+                'Adjust your room’s AC with the in-room thermostat for perfect comfort.<br><br>' +
+                'Need help with it?',
+        quickReplies: ['Tech Support', 'Back to Menu']
+    },
+    {
+        keywords: ['tech support'],
+        answer: '<strong>Tech Support:</strong><br><br>' +
+                'Call +233312290511—we’ll send someone to fix your AC or any tech issue!<br><br>' +
+                'Report now?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['room view', 'window', 'balcony'],
+        answer: '<strong>Room Views:</strong><br><br>' +
+                'Choose city, garden, or ocean views—tell us your preference at booking!<br><br>' +
+                'Pick a view?',
+        quickReplies: ['Ocean View', 'City View', 'Garden View', 'Back to Menu']
+    },
+    {
+        keywords: ['ocean view'],
+        answer: '<strong>Ocean View:</strong><br><br>' +
+                'Enjoy stunning sea vistas—available in Deluxe and Suites. Book with us to request!<br><br>' +
+                'Want this view?',
+        quickReplies: ['Book Now', 'Back to Menu']
+    },
+    {
+        keywords: ['city view'],
+        answer: '<strong>City View:</strong><br><br>' +
+                'See Takoradi’s skyline—available in most rooms. Request at booking!<br><br>' +
+                'Book this view?',
+        quickReplies: ['Book Now', 'Back to Menu']
+    },
+    {
+        keywords: ['garden view'],
+        answer: '<strong>Garden View:</strong><br><br>' +
+                'Relax with lush greenery—available in Deluxe and Suites. Request when booking!<br><br>' +
+                'Choose this view?',
+        quickReplies: ['Book Now', 'Back to Menu']
+    },
+    {
+        keywords: ['room size', 'bed size', 'room capacity'],
+        answer: '<strong>Room Capacities:</strong><br><br>' +
+                '- <strong>Standard:</strong> Queen bed, up to 2 guests<br>' +
+                '- <strong>Deluxe:</strong> King bed, up to 3 guests<br>' +
+                '- <strong>Suites:</strong> Larger with extra space<br><br>' +
+                'Need more specifics?',
+        quickReplies: ['Room Types', 'Back to Menu']
+    },
+    {
+        keywords: ['room noise', 'quiet room', 'soundproof'],
+        answer: '<strong>Quiet Stay:</strong><br><br>' +
+                'Our soundproofed rooms ensure peace. Noise issue? We’ll fix it fast!<br><br>' +
+                'All quiet?',
+        quickReplies: ['Report Noise', 'Back to Menu']
+    },
+    {
+        keywords: ['report noise'],
+        answer: '<strong>Report Noise:</strong><br><br>' +
+                'Call +233312290511—we’ll address any disturbance right away!<br><br>' +
+                'What’s the issue?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['accessibility', 'accessible room', 'ada room', 'disability'],
+        answer: '<strong>Accessibility:</strong><br><br>' +
+                'Accessible rooms with grab bars, roll-in showers, and more for mobility needs.<br><br>' +
+                'Need one?',
+        quickReplies: ['Book Accessible Room', 'Accessibility Info', 'Back to Menu']
+    },
+    {
+        keywords: ['book accessible room'],
+        answer: '<strong>Book Accessible Room:</strong><br><br>' +
+                'Call +233312290511 to reserve an accessible room tailored to your needs!<br><br>' +
+                'Book now?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['accessibility info'],
+        answer: '<strong>Accessibility Info:</strong><br><br>' +
+                'Features include ramps, wide doors, and adapted bathrooms—ask for details at booking!<br><br>' +
+                'More questions?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['kids', 'children', 'family friendly'],
+        answer: '<strong>Family-Friendly:</strong><br><br>' +
+                'Kids under 12 stay free with adults. Cribs or extra beds on request!<br><br>' +
+                'With kids?',
+        quickReplies: ['Kid Activities', 'Extra Bed', 'Back to Menu']
+    },
+    {
+        keywords: ['kid activities', 'activities for kids'],
+        answer: '<strong>Kid Activities:</strong><br><br>' +
+                'Pool fun and nearby beaches—ask the front desk for local kid-friendly spots!<br><br>' +
+                'Plan something?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['extra bed'],
+        answer: '<strong>Extra Bed:</strong><br><br>' +
+                'Add an extra bed for GH₵50/night—call +233312290511 to request!<br><br>' +
+                'Need one?',
+        quickReplies: ['Yes', 'Back to Menu']
+    },
+    {
+        keywords: ['weather', 'takoradi weather', 'climate'],
+        answer: '<strong>Takoradi Weather:</strong><br><br>' +
+                'Warm (28-32°C) with occasional rain—pack light and bring an umbrella!<br><br>' +
+                'Need travel tips?',
+        quickReplies: ['Local Tips', 'Back to Menu']
+    },
+    {
+        keywords: ['local tips', 'travel tips'],
+        answer: '<strong>Local Tips:</strong><br><br>' +
+                '- Try local jollof rice!<br>' +
+                '- Bargain at Market Circle.<br>' +
+                '- Sunscreen is a must.<br><br>' +
+                'More advice?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['power outage', 'electricity', 'backup power'],
+        answer: '<strong>Power Reliability:</strong><br><br>' +
+                'Backup generators keep everything running during outages.<br><br>' +
+                'Anything else?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['tv channels', 'television', 'entertainment'],
+        answer: '<strong>In-Room Entertainment:</strong><br><br>' +
+                'Smart TVs with cable—news, sports, movies, and more!<br><br>' +
+                'Want the channel list?',
+        quickReplies: ['Channel List', 'Back to Menu']
+    },
+    {
+        keywords: ['channel list'],
+        answer: '<strong>Channel List:</strong><br><br>' +
+                'Includes CNN, BBC, SuperSport, and local channels—check your TV guide!<br><br>' +
+                'Enjoying it?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['room smells', 'odor', 'air freshener'],
+        answer: '<strong>Fresh Rooms:</strong><br><br>' +
+                'Smell something off? We’ll send housekeeping with air fresheners ASAP!<br><br>' +
+                'Report it?',
+        quickReplies: ['Report Odor', 'Back to Menu']
+    },
+    {
+        keywords: ['report odor'],
+        answer: '<strong>Report Odor:</strong><br><br>' +
+                'Call +233312290511—we’ll freshen your room right away!<br><br>' +
+                'What’s the smell?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['insects', 'bugs', 'pest control'],
+        answer: '<strong>Pest-Free Stay:</strong><br><br>' +
+                'Spot an insect? Our team will handle it instantly—just let us know!<br><br>' +
+                'See anything?',
+        quickReplies: ['Report Bug', 'Back to Menu']
+    },
+    {
+        keywords: ['report bug'],
+        answer: '<strong>Report Bug:</strong><br><br>' +
+                'Call +233312290511—we’ll send pest control right over!<br><br>' +
+                'What did you see?',
+        quickReplies: ['Back to Menu']
+    },
+    {
+        keywords: ['back to menu', 'main menu', 'menu'],
+        answer: '<strong>Main Menu:</strong><br><br>' +
+                '- <strong>Room Prices:</strong> Check our rates.<br>' +
+                '- <strong>Amenities:</strong> Explore pool, gym, and more.<br>' +
+                '- <strong>Book a Room:</strong> Secure your stay.<br>' +
+                '- <strong>Location:</strong> Find us in Takoradi.<br>' +
+                '- <strong>Special Offers:</strong> Grab a deal!<br><br>' +
+                'Where to next?',
+        quickReplies: ['Room Prices', 'Amenities', 'Book a Room', 'Hotel Location', 'Special Offers']
+    }
+];
+
+
+// Function to show popup message (modified to be triggered manually)
+function showPopupMessage() {
+    chatPopup.classList.add('show');
+    setTimeout(() => {
+        chatPopup.classList.remove('show');
+    }, 3000); // Hide after 3 seconds
+}
+
+// Core chat functions (unchanged)
+function showTypingIndicator() {
+    const typingDiv = document.createElement('div');
+    typingDiv.classList.add('message', 'bot', 'typing');
+    typingDiv.innerHTML = '<div class="typing-animation"><span></span><span></span><span></span></div>';
+    chatBody.appendChild(typingDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    return typingDiv;
+}
+
+function hideTypingIndicator(typingDiv) {
+    typingDiv.remove();
+}
+
+function addMessage(sender, text, isHTML = false) {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('message', sender);
+    if (isHTML) {
+        messageDiv.innerHTML = text;
+    } else {
+        messageDiv.textContent = text;
+    }
+    chatBody.appendChild(messageDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function addQuickReplies(replies) {
+    const quickReplyContainer = document.createElement('div');
+    quickReplyContainer.classList.add('quick-replies');
+    replies.forEach((reply) => {
+        const button = document.createElement('button');
+        button.textContent = reply;
+        button.addEventListener('click', () => handleQuickReply(reply));
+        quickReplyContainer.appendChild(button);
+    });
+    chatBody.appendChild(quickReplyContainer);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function handleQuickReply(reply) {
+    if (reply === 'Book Now') {
+        const bookingForm = document.getElementById('booking-form'); // Adjust ID if needed
+        if (bookingForm) {
+            window.location.href = 'index.html';
+            addMessage('user', reply);
+            addMessage('bot', 'You need to fill it out to secure your stay!');
+        } else {
+            addMessage('user', reply);
+            addMessage('bot', 'Oops! The booking form isn’t available here. Visit <a href="https://www.kingstelhotel.com" target="_blank">kingstelhotel.com</a> to book!', true);
+        }
+        return;
+    }
+    const qa = predefinedQA.find(item => item.keywords.some(keyword => keyword.toLowerCase() === reply.toLowerCase()));
+    if (qa) {
+        addMessage('user', reply);
+        const typingDiv = showTypingIndicator();
+        setTimeout(() => {
+            hideTypingIndicator(typingDiv);
+            addMessage('bot', qa.answer, true);
+            if (qa.quickReplies) {
+                addQuickReplies(qa.quickReplies);
+            }
+        }, 1000);
+    } else {
+        addMessage('user', reply);
+        addMessage('bot', "I'm here to help with everything you need to know about our prices, bookings, restaurant services, rooms, gym, tennis court, and pool availability. If you have any questions about these, just ask—I’ve got you covered! For anything else, our support team is ready at +233312290511. What’s on your mind?", true);
+        addQuickReplies(['Room Prices', 'Amenities', 'Book a Room', 'Back to Menu']);
+    }
+}
+
+function handleMessage() {
+    const message = userInput.value.trim().toLowerCase();
+    if (!message) return;
+
+    addMessage('user', message);
+    userInput.value = '';
+
+    const typingDiv = showTypingIndicator();
+    setTimeout(() => {
+        hideTypingIndicator(typingDiv);
+
+        const reply = predefinedQA.find((qa) =>
+            qa.keywords.some((keyword) => message.includes(keyword))
+        );
+
+        if (reply) {
+            addMessage('bot', reply.answer, true);
+            if (reply.quickReplies) {
+                addQuickReplies(reply.quickReplies);
+            }
+        } else {
+            addMessage(
+                'bot',
+                "I'm here to help with everything you need to know about our prices, bookings, restaurant services, rooms, gym, tennis court, and pool availability. If you have any questions about these, just ask—I’ve got you covered! For anything else, our support team is always ready to assist at +233312290511. Thank you for letting us be part of your journey!",
+                true
+            );
+            addQuickReplies(['Room Prices', 'Amenities', 'Book a Room', 'Back to Menu']);
+        }
+    }, 1000);
+}
+
+function closeChatWidget() {
+    chatWidget.classList.remove('show');
+    chatPopup.classList.remove('show'); // Ensure popup is hidden when closing
+}
+
+// Event Listeners
+sendBtn.addEventListener('click', handleMessage);
+userInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleMessage();
+});
+closeBtn.addEventListener('click', closeChatWidget);
+
+// Toggle chat widget and show popup on first icon click
+let isFirstChatOpen = true; // Track if chat is opened for the first time
+chatIcon.addEventListener('click', () => {
+    chatWidget.classList.toggle('show');
+    if (chatWidget.classList.contains('show')) {
+        chatPopup.classList.remove('show'); // Hide popup when chat opens
+        if (isFirstChatOpen) {
+            setTimeout(() => {
+                addMessage('bot', 'Hi! 👋 I’m Kingstel Hotel Assistant, here to make your stay exceptional. How can I assist you today?', true);
+                addQuickReplies(['Room Prices', 'Amenities', 'Book a Room', 'Hotel Location', 'Special Offers']);
+            }, 1000); // Simulate bot greeting after 1s
+            isFirstChatOpen = false; // Mark chat as opened
+        }
+    }
+});
+
+// Ensure chat is hidden on page load
+document.addEventListener('DOMContentLoaded', () => {
+    chatWidget.classList.remove('show'); // Hide chat widget
+    chatPopup.classList.remove('show'); // Hide popup
+    // Optional: Show popup after a delay only if chat hasn't been opened
+    setTimeout(() => {
+        if (isFirstChatOpen && !chatWidget.classList.contains('show')) {
+            showPopupMessage();
+        }
+    }, 5000); // Show popup after 5s if chat isn't open
+});
+
+        
+    </script>
+
+</body>
+</html>

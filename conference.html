@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Rooms - Kingstel Hotel</title>
+    <link rel="icon" type="image/svg+xml" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjjfdQjcPqDeALBNO9_MZ_dx7SvPzLqkbefA&s">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="conference.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+</head>
+<body>
+   
+ <!-- Top Bar -->
+ <div class="top-bar">
+    <div class="container">
+        <div class="contact-info">
+           
+            <div class="contact-item desktop-only">
+                <i data-lucide="mail"></i>
+                <span>kingstelhotel@gmail.com</span>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/kingstelhotels?igsh=MWRwNng2bHlwZGRwcg=="><i style="color: rgb(179, 14, 55);"  data-lucide="instagram"></i></a>
+            <a href="https://www.facebook.com/share/1BzWdY547p/"><i style="color: steelblue;" data-lucide="facebook"></i></a>
+            <a href="https://x.com/HotelKingstel?t=kqI5Vw9EIqo2rFRP9g3XoQ&s=09"><i style="color: steelblue;" data-lucide="twitter"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container nav-content">
+        <div class="logo"><a href="index.html"> <div class="logo"><img src="images/kingstel logo.png" alt=""></div></a></div>
+        
+        <div class="nav-links desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="index.html#rooms">Rooms</a>
+            <a href="amenities.html">Amenities</a>
+            <a href="dining.html">Dining</a>
+            <a href="conference.html">Conference</a>
+            <a href="about.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <button class="btn-book">Book Now</button>
+        </div>
+
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+    </div>
+
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#rooms">Rooms</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="dining.html">Dining</a>
+        <a href="conference.html">Conference</a>
+        <a href="about.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <button class="btn-book">Book Now</button>
+    </div>
+</nav>
+
+    <!-- Conference Header -->
+    <header class="conference-header" style="width: 100%; height: 50vh; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; ">
+       
+        <div class="container">
+            <h1 style="color: aliceblue;">Conference & Meeting Rooms</h1>
+            <p>Professional spaces for your business needs, equipped with modern technology and supported by our dedicated team.</p>
+        </div>
+    </header>
+
+    <!-- Conference Rooms -->
+    <section class="conference-rooms">
+        <div class="container">
+            <div class="conference-grid">
+                <!-- Large Conference Room -->
+                <div class="conference-card">
+                    <div class="conference-image">
+                        <video src="videos/largeconference.mp4" poster="images/large-conference.jpg" alt="Large Conference Room" autoplay muted loop playsinline class="conference-video"></video>
+                        <div class="price-badge">GH₵7000/day</div>
+                    </div>
+                    <div class="conference-content">
+                        <h2>Large Conference Room</h2>
+                        <p>Perfect for large corporate events, conferences, and seminars. Features state-of-the-art presentation equipment and flexible seating arrangements.</p>
+                        
+                        <div class="features-grid">
+                            <div class="feature">
+                                <i data-lucide="users"></i>
+                                <span>Capacity: 500 people</span>
+                            </div>
+                            <div class="feature">
+                                <i data-lucide="monitor"></i>
+                                <span>4K Projector</span>
+                            </div>
+                            <div class="feature">
+                                <i data-lucide="mic-2"></i>
+                                <span>Sound System</span>
+                            </div>
+                            <div class="feature">
+                                <i data-lucide="wifi"></i>
+                                <span>High-speed WiFi</span>
+                            </div>
+                        </div>
+
+                        <button class="btn-book" onclick="sendEmailJS()">
+                            Book Now
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mini Conference Room -->
+                <div class="conference-card">
+                    <div class="conference-image">
+                        <video src="videos/VID-20250218-WA0004.mp4" poster="images/large-conference.jpg" alt="Large Conference Room" autoplay muted loop playsinline class="conference-video"></video>
+                        <div class="price-badge">GH₵4000/day</div>
+                    </div>
+                    <div class="conference-content">
+                        <h2>Mini Conference Room</h2>
+                        <p>Ideal for small meetings, interviews, and team discussions. Intimate setting with all necessary business amenities.</p>
+                        
+                        <div class="features-grid">
+                            <div class="feature">
+                                <i data-lucide="users"></i>
+                                <span>Capacity: 100 people</span>
+                            </div>
+                            <div class="feature">
+                                <i data-lucide="monitor"></i>
+                                <span>4K Projector</span>
+                            </div>
+                            <div class="feature">
+                                <i data-lucide="mic-2"></i>
+                                <span>Sound System</span>
+                            </div>
+                            <div class="feature">
+                                <i data-lucide="wifi"></i>
+                                <span>High-speed WiFi</span>
+                            </div>
+                        </div>
+                        <button class="btn-book" onclick="sendEmailJS()">
+                            Book Now
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conference Booking Modal -->
+    <div id="conferenceModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i data-lucide="x"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h2>Book Conference Room</h2>
+                <div class="booking-summary">
+                    <span id="conferenceType"></span>
+                    <span id="conferencePrice"></span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <form id="conferenceBookingForm" class="booking-details-form" >
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="companyName">Company Name</label>
+                            <input type="text" id="companyName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPerson">Contact Person</label>
+                            <input type="text" id="contactPerson" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="conferenceEmail">Email</label>
+                            <input type="email" id="conferenceEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="conferencePhone">Phone</label>
+                            <input type="tel" id="conferencePhone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="eventDate">Event Date</label>
+                            <input type="date" id="eventDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="attendees">Number of Attendees</label>
+                            <input type="number" id="attendees" min="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="startTime">Start Time</label>
+                            <input type="time" id="startTime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="endTime">End Time</label>
+                            <input type="time" id="endTime" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="conferenceRequests">Additional Requirements</label>
+                        <textarea id="conferenceRequests" rows="3" placeholder="Catering, equipment setup, etc."></textarea>
+                    </div>
+
+                    <button type="submit" id="confirmBooking" class="btn-book">
+                        Confirm Booking
+                        <i data-lucide="check"></i>
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+ <!-- Footer -->
+ <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h3 class="logo" style="color: #dddcdc;">Kingstel Hotel</h3>
+                <p >Kingstel Hotel is a 3 Star hotel located in a very plush area of Sekondi-Takoradi, the Oil City of Ghana perfected for the business and leisure traveler.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/kingstelhotels?igsh=MWRwNng2bHlwZGRwcg=="><i style="color: rgb(179, 14, 55);"  data-lucide="instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BzWdY547p/"><i style="color: steelblue;" data-lucide="facebook"></i></a>
+                    <a href="https://x.com/HotelKingstel?t=kqI5Vw9EIqo2rFRP9g3XoQ&s=09"><i style="color: steelblue;" data-lucide="twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#rooms">Rooms & Suites</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="conference.html">Conference</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            
+            <div  class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i data-lucide="map-pin"></i>Dupaul Road,Apollo Traffic Lights, 
+                        Takoradi - Ghana</li>
+                    <li><i data-lucide="phone"></i>+233312290511</li>
+                    <li><i data-lucide="mail"></i> kingstelhotel@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 All rights reserved | Powered by <a href="https://wa.me/0599210911">AniTech</a>.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+    <script>lucide.createIcons();</script>
+    <script type="module" src="conference.js"></script>
+    
+   
+</body>
+</html>

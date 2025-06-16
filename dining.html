@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining at Kingstel Hotel - Sekondi-Takoradi, Ghana</title>
+    <meta name="description" content="Enjoy exquisite dining at Kingstel Hotel in Sekondi-Takoradi, Ghana. Savor premium cuisine and drinks at our 3-star restaurant. Reserve now!">
+    <meta name="keywords" content="Kingstel Hotel dining, Sekondi-Takoradi restaurant, Ghana dining, 3-star hotel restaurant, luxury dining, food and drinks">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Kingstel Hotel">
+    <meta name="theme-color" content="#ee780a">
+    <meta property="og:title" content="Dining at Kingstel Hotel - Sekondi-Takoradi, Ghana">
+    <meta property="og:description" content="Indulge in luxury dining at Kingstel Hotel’s restaurant in Sekondi-Takoradi, Ghana. Perfect for guests and visitors alike.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kingstelhotel.com/dining.html">
+    <meta property="og:image" content="https://www.kingstelhotel.com/images/Outside Catering.jpg">
+    <meta property="og:site_name" content="Kingstel Hotel">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dining at Kingstel Hotel - Luxury Restaurant in Ghana">
+    <meta name="twitter:description" content="Experience fine dining at Kingstel Hotel in Sekondi-Takoradi. Book a table for premium cuisine today!">
+    <meta name="twitter:image" content="https://www.kingstelhotel.com/images/Outside Catering.jpg">
+    <link rel="canonical" href="https://www.kingstelhotel.com/dining.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjjfdQjcPqDeALBNO9_MZ_dx7SvPzLqkbefA&s">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .nav-links .close-menu-btn {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #d97706;
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .nav-links.active .close-menu-btn {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.jpg" width="100%" alt="Kingstel Hotel" loading="lazy">
+                    
+                </a>
+            </div>
+            <div class="nav-links">
+                <button class="close-menu-btn" aria-label="Close mobile menu">×</button>
+                <a href="index.html">Home</a>
+                <a href="index.html#rooms">Rooms</a>
+                <a href="amenities.html">Amenities</a>
+                <a href="dining.html">Dining</a>
+                <a href="conference.html">Conference</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <button id="book-room-btn" class="btn-book navBtn">Book Now</button>
+            </div>
+            <div id="user-info" class="user-info hidden">
+                <p class="user-name"></p>
+                <p class="user-type"></p>
+                <button id="logout-btn" class="logout-btn" style="margin-left: -15px;" aria-label="Logout">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'%3E%3C/path%3E%3Cpolyline points='16 17 21 12 16 7'%3E%3C/polyline%3E%3Cline x1='21' y1='12' x2='9' y2='12'%3E%3C/line%3E%3C/svg%3E" alt="Logout" loading="lazy">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="menu-page" class="page active">
+        <main>
+            <div class="menu-header">
+                <h2>Menu | Search your favorite ></h2>
+                <div class="menu-actions">
+                    <div class="search-container">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E" alt="Search" loading="lazy">
+                        <input type="text" id="search-input" placeholder="Search menu items..." aria-label="Search menu items">
+                        <select id="category-filter" aria-label="Filter by category">
+                            <option value="">All Categories</option>
+                            <option value="special">Special Dishes</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="drinks">Drinks</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <section class="hot-items-section">
+                <h2>Trending & Hot</h2>
+                <div class="hot-items-container">
+                    <div class="hot-items-scroll">
+                        <!-- Hot items will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <div id="no-results" class="no-results hidden">
+                <p>No menu items found matching your search.</p>
+            </div>
+
+            <section id="special" class="menu-section">
+                <h2>Kingstel Special Dishes</h2>
+                <div class="menu-grid" id="special-items"></div>
+            </section>
+
+            <section id="breakfast" class="menu-section">
+                <h2>Breakfast</h2>
+                <div class="menu-grid" id="breakfast-items"></div>
+            </section>
+
+            <section id="lunch" class="menu-section">
+                <h2>Lunch</h2>
+                <div class="menu-grid" id="lunch-items"></div>
+            </section>
+
+            <section id="dinner" class="menu-section">
+                <h2>Dinner</h2>
+                <div class="menu-grid" id="dinner-items"></div>
+            </section>
+
+            <section id="drinks" class="menu-section">
+                <h2>Drinks</h2>
+                <div class="menu-grid" id="drinks-items"></div>
+            </section>
+        </main>
+    </div>
+
+    <div id="customer-prompt" class="modal">
+        <div class="modal-content">
+            <h2 style="text-align: center;">Welcome to Kingstel Hotel <br> Restaurant</h2>
+            <div class="customer-type-buttons">
+                <button class="customer-type-btn" onclick="selectCustomerType(event, 'guest')" aria-label="Select Guest">Guest</button>
+                <button class="customer-type-btn" onclick="selectCustomerType(event, 'external')" aria-label="Select External Customer">External</button>
+            </div>
+            <form id="customer-form">
+                <div class="form-group">
+                    <label for="customer-name">Full Name</label>
+                    <input type="text" id="customer-name" required placeholder="Enter your full name" aria-label="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Phone Number</label>
+                    <input type="tel" id="customer-phone" required placeholder="Enter your phone number" aria-label="Enter your phone number">
+                </div>
+                <div id="room-input" class="form-group">
+                    <label for="room-number">Room Number</label>
+                    <input type="text" id="room-number" required placeholder="Enter room number" aria-label="Enter room number">
+                    <p class="error-message" id="room-error"></p>
+                </div>
+                <div id="address-input" class="form-group hidden">
+                    <label for="delivery-address">Delivery Address</label>
+                    <textarea id="delivery-address" rows="3" placeholder="Enter your delivery address" aria-label="Enter delivery address"></textarea>
+                </div>
+                <button type="submit" class="submit-btn" aria-label="Continue">Continue</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="cart-header">
+                <h3>Your Order</h3>
+                <button onclick="toggleCart()" class="close-button" aria-label="Close cart modal">×</button>
+            </div>
+            <div id="cart-items"></div>
+            <div class="cart-footer">
+                <div class="total">
+                    <p>Total:</p>
+                    <p id="cart-total">₵0</p>
+                </div>
+                <button onclick="submitOrder()" class="submit-order" aria-label="Confirm order">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="sticky-cart-icon" onclick="toggleCart()" aria-label="View cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="sticky-cart-count" class="cart-count">0</span>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Kingstel Hotel</h3>
+                <p>Experience luxury and comfort at Kingstel Hotel in Sekondi-Takoradi, Ghana. Enjoy exquisite dining, modern amenities, and exceptional hospitality.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#rooms">Rooms</a></li>
+                    <li><a href="amenities.html">Amenities</a></li>
+                    <li><a href="dining.html">Dining</a></li>
+                    <li><a href="conference.html">Conference</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Sekondi-Takoradi, Ghana</p>
+                <p><i class="fas fa-phone"></i> +233 55 153 3311</p>
+                <p><i class="fas fa-envelope"></i> info@kingstelhotel.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <h3>Newsletter</h3>
+                <form class="footer-newsletter">
+                    <input type="email" placeholder="Enter your email" aria-label="Enter your email">
+                    <button type="submit" class="btn btn-primary" aria-label="Subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Kingstel Hotel. All rights reserved. Powered by <a href="https://wa.me/0599210911">AniTech</a>.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
